@@ -41,15 +41,23 @@ def submissionSuccess():
     session['language'] = request.form['language']
     session['favTa'] = request.form.getlist('favTa')
     session['comment'] = request.form['comment']
-
-    print(session['favTa'])
-
     return redirect('/displaySubmissionSuccess')
 
 @app.route('/displaySubmissionSuccess')
 def displaySubmissionSuccess():
     return render_template("submissionSuccess.html")
 
+
+@app.route('/startOver')
+def startOver():
+    print("session['favTa']")
+    print(session['favTa'])
+    print("len(session['favTa'])")
+    print(len(session['favTa']))
+    session.clear()
+    print("session restarted")
+    
+    return redirect('/')
 
 # @app.route('/destroy_session')
 # def killTheCount():

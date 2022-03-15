@@ -25,13 +25,14 @@
                 
                 <p class="formLabels">Favorite TA(s): </p>
                 
-                    {% for i in session.favoriteDojoTa: %}
-                    <p class="formLabels">
-                    {{i}}
-                    </p>
+                    {% for i in session.favTa: %}
+                        <p class="formLabels">
+                        {{i}}
+                        </p>
                     {%endfor%}
                 
-                    <a class="btn btn-primary btn-lg btn-block" href="/">Return to Survey</a>
+                    <!-- <a class="btn btn-primary btn-lg btn-block" href="/">Respond to Survey Again</a> -->
+                    <a class="btn btn-danger btn-lg btn-block" href="/startOver">startOver</a>
             </div>
         </div>
         

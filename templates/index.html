@@ -20,10 +20,10 @@
                 
                 {% with messages = get_flashed_messages() %}    <!-- declare a variable called messages. also, this "get_flashed_messages" is a python import, just embrace it. -->
                     {% if messages %}                           <!-- check if there are any messages -->
-                {% for message in messages %}                   <!-- loop through the messages -->
-                <p>{{message}}</p><!-- display each message in a paragraph tag -->
-                {% endfor %}
-                {% endif %}
+                        {% for message in messages %}                   <!-- loop through the messages -->
+                            <p>{{message}}</p>                              <!-- display each message in a paragraph tag -->
+                        {% endfor %}
+                    {% endif %}
                 {% endwith %}
             
                 <form action="/submissionSuccess" method="post">
@@ -57,14 +57,13 @@
                         <label class="formLabels">Mel-B</label>
                         <input type="checkbox" name="favTa" value="Brandon-C"/>
                         <label class="formLabels">Brandon-C</label>
-                        <input type="checkbox" name="favTa" value="TheeJuli"/>
-                        <label class="formLabels">TheeJuli</label>
+                        <input type="checkbox" name="favTa" value="Caden"/>
+                        <label class="formLabels">Caden</label>
                     </div> 
                     
                     <p class="formLabels">Comment (optional):</p>
                     <textarea class="inputTextArea" name="comment" placeholder="Enter comments..."></textarea>  
-                    <!-- <input class="inputTextOneLiner" type="text" name="yourName" placeholder="type it here, man" value=""> -->
-                    
+                    <p></p>
                     <button class="btn btn-primary btn-lg btn-block" type="submit">Submit</button>
                     
                 </form>
